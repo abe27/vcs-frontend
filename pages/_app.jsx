@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import { NextUIProvider } from "@nextui-org/react";
 import { ChakraProvider } from "@chakra-ui/react";
 import { SessionProvider } from "next-auth/react";
 import { Noto_Sans_Thai } from "@next/font/google";
@@ -8,9 +9,11 @@ const MicroApp = ({ Component, pageProps: { session, ...pageProps } }) => {
   return (
     <section className={fonts.className}>
       <SessionProvider session={session}>
-        <ChakraProvider>
-          <Component {...pageProps} />
-        </ChakraProvider>
+        <NextUIProvider>
+          <ChakraProvider>
+            <Component {...pageProps} />
+          </ChakraProvider>
+        </NextUIProvider>
       </SessionProvider>
     </section>
   );
