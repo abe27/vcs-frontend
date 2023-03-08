@@ -31,7 +31,7 @@ const LogOutPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex items-center justify-center w-screen h-screen bg-gradient-to-r from-indigo-600 to-blue-400">
+      <div className="flex items-center justify-center w-screen h-screen bg-gradient-to-r from-gray-300 to-gray-100">
         <div className="px-40 py-20 bg-white rounded-md shadow-xl">
           <div className="flex flex-col items-center">
             <h6 className="mb-2 text-2xl font-bold text-center text-gray-800 md:text-3xl">
