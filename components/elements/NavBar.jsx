@@ -372,7 +372,7 @@ const NavBar = ({
                     </svg>
                   </div>
                   <input
-                    className="bg-gray-100 focus:outline-none rounded w-full text-sm text-gray-500 bg-gray-100 pl-10 py-2"
+                    className="focus:outline-none rounded w-full text-sm text-gray-500 bg-gray-100 pl-10 py-2"
                     type="text"
                     placeholder="Search"
                   />
@@ -582,7 +582,7 @@ const NavBar = ({
                 >
                   {profile ? (
                     <ul className="p-2 w-40 border-r bg-white absolute rounded z-40 left-0 shadow mt-64 ">
-                      <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:bg-indigo-700 hover:text-white focus:text-indigo-700 focus:outline-none">
+                      <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:bg-indigo-700 hover:text-white focus:text-indigo-700 focus:outline-none" onClick={() => router.push("/member/profile")}>
                         <div className="flex items-center">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
