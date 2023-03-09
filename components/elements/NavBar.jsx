@@ -23,7 +23,7 @@ const NavBar = ({
       </Head>
       {/* Navigation starts */}
       {/* Mobile */}
-      {/* <div
+      <div
         className={
           show
             ? "w-full h-full absolute z-40  transform  translate-x-0 "
@@ -57,7 +57,7 @@ const NavBar = ({
                     </g>
                   </svg>
                   <p className="text-bold md:text2xl text-base pl-3 text-gray-800">
-                    The North
+                    {process.env.APP_NAME}
                   </p>
                 </div>
                 <div
@@ -382,12 +382,12 @@ const NavBar = ({
                 <div className="w-full flex items-center justify-between px-6 pt-1">
                   <div className="flex items-center">
                     <img
-                      alt="profile-pic"
-                      src="https://tuk-cdn.s3.amazonaws.com/assets/components/boxed_layout/bl_1.png"
+                      src="https://i.pravatar.cc/300"
+                      alt={session?.user.userName}
                       className="w-8 h-8 rounded-md"
                     />
                     <p className=" text-gray-800 text-base leading-4 ml-2">
-                      Jane Doe
+                      {session?.user.userName}
                     </p>
                   </div>
                   <ul className="flex">
@@ -433,7 +433,7 @@ const NavBar = ({
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
       {/* Mobile */}
       <nav className="w-full mx-auto bg-white shadow relative z-20">
         <div className="justify-between container px-6 h-16 flex items-center lg:items-stretch mx-auto">
@@ -582,7 +582,7 @@ const NavBar = ({
                 >
                   {profile ? (
                     <ul className="p-2 w-40 border-r bg-white absolute rounded z-40 left-0 shadow mt-64 ">
-                      <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+                      <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:bg-indigo-700 hover:text-white focus:text-indigo-700 focus:outline-none">
                         <div className="flex items-center">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -603,7 +603,7 @@ const NavBar = ({
                           <span className="ml-2">My Profile</span>
                         </div>
                       </li>
-                      <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex items-center">
+                      <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:bg-indigo-700 hover:text-white focus:text-indigo-700 focus:outline-none flex items-center" onClick={() => router.push("/member/help")}>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="icon icon-tabler icon-tabler-help"
@@ -623,7 +623,7 @@ const NavBar = ({
                         </svg>
                         <span className="ml-2">Help Center</span>
                       </li>
-                      <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                      <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:bg-indigo-700 hover:text-white flex items-center focus:text-indigo-700 focus:outline-none" onClick={() => router.push("/member/setting")}>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="icon icon-tabler icon-tabler-settings"
@@ -643,7 +643,7 @@ const NavBar = ({
                         <span className="ml-2">Account Settings</span>
                       </li>
                       <li
-                        className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none"
+                        className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:bg-indigo-700 hover:text-white flex items-center focus:text-indigo-700 focus:outline-none"
                         onClick={() => router.push("/logout")}
                       >
                         <svg
