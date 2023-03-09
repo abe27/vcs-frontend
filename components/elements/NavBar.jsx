@@ -23,7 +23,7 @@ const NavBar = ({
       </Head>
       {/* Navigation starts */}
       {/* Mobile */}
-      <div
+      {/* <div
         className={
           show
             ? "w-full h-full absolute z-40  transform  translate-x-0 "
@@ -433,7 +433,7 @@ const NavBar = ({
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Mobile */}
       <nav className="w-full mx-auto bg-white shadow relative z-20">
         <div className="justify-between container px-6 h-16 flex items-center lg:items-stretch mx-auto">
@@ -461,7 +461,7 @@ const NavBar = ({
               </h3>
             </div>
             <ul className="pr-32 mt-3 xl:flex hidden items-center h-full">
-              <li className="hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm text-indigo-700 tracking-normal">
+              <li className="hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm text-indigo-700 tracking-normal" onClick={() => router.push("/")}>
                 Dashboard
               </li>
               <li
@@ -471,7 +471,7 @@ const NavBar = ({
               >
                 {product ? (
                   <ul className="bg-white shadow rounded py-1 w-32 left-0 mt-16 -ml-4 absolute  top-0">
-                    <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal">
+                    <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal" onClick={() => router.push("/product/ladingpage")}>
                       Landing Pages
                     </li>
                     <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal">
@@ -503,7 +503,7 @@ const NavBar = ({
                   </svg>
                 </span>
               </li>
-              <li className="hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm text-gry-800 mr-10 tracking-normal">
+              <li className="hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm text-gry-800 mr-10 tracking-normal" onClick={() => router.push("/perfermance")}>
                 Performance
               </li>
               <li
