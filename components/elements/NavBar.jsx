@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import Head from "next/head";
+
+
 const NavBar = ({
   title = process.env.APP_NAME,
   description = process.env.APP_DESCRIPTION,
@@ -461,7 +463,10 @@ const NavBar = ({
               </h3>
             </div>
             <ul className="pr-32 mt-3 xl:flex hidden items-center h-full">
-              <li className="hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm text-indigo-700 tracking-normal" onClick={() => router.push("/")}>
+              <li
+                className="hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm text-indigo-700 tracking-normal"
+                onClick={() => router.push("/")}
+              >
                 Dashboard
               </li>
               <li
@@ -471,13 +476,22 @@ const NavBar = ({
               >
                 {product ? (
                   <ul className="bg-white shadow rounded py-1 w-32 left-0 mt-16 -ml-4 absolute  top-0">
-                    <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal" onClick={() => router.push("/product/landingpage")}>
+                    <li
+                      className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal"
+                      onClick={() => router.push("/product/landingpage")}
+                    >
                       Landing Pages
                     </li>
-                    <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal" onClick={() => router.push("/product/template")}>
+                    <li
+                      className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal"
+                      onClick={() => router.push("/product/template")}
+                    >
                       Templates
                     </li>
-                    <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal" onClick={() => router.push("/product/component")}>
+                    <li
+                      className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal"
+                      onClick={() => router.push("/product/component")}
+                    >
                       Components
                     </li>
                   </ul>
@@ -503,7 +517,10 @@ const NavBar = ({
                   </svg>
                 </span>
               </li>
-              <li className="hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm text-gry-800 mr-10 tracking-normal" onClick={() => router.push("/perfermance")}>
+              <li
+                className="hover:text-indigo-700 cursor-pointer h-full flex items-center text-sm text-gry-800 mr-10 tracking-normal"
+                onClick={() => router.push("/perfermance")}
+              >
                 Performance
               </li>
               <li
@@ -513,7 +530,10 @@ const NavBar = ({
               >
                 {deliverables ? (
                   <ul className="bg-white shadow rounded py-1 w-32 left-0 mt-16 -ml-4 absolute  top-0">
-                    <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal" onClick={() => router.push("/deliver/landing")}>
+                    <li
+                      className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal"
+                      onClick={() => router.push("/deliver/landing")}
+                    >
                       Landing Pages
                     </li>
                     <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-3 hover:bg-indigo-700 hover:text-white px-3 font-normal">
@@ -582,7 +602,10 @@ const NavBar = ({
                 >
                   {profile ? (
                     <ul className="p-2 w-40 border-r bg-white absolute rounded z-40 left-0 shadow mt-64 ">
-                      <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:bg-indigo-700 hover:text-white focus:text-indigo-700 focus:outline-none" onClick={() => router.push("/member/profile")}>
+                      <li
+                        className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:bg-indigo-700 hover:text-white focus:text-indigo-700 focus:outline-none"
+                        onClick={() => router.push("/member/profile")}
+                      >
                         <div className="flex items-center">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -603,7 +626,10 @@ const NavBar = ({
                           <span className="ml-2">My Profile</span>
                         </div>
                       </li>
-                      <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:bg-indigo-700 hover:text-white focus:text-indigo-700 focus:outline-none flex items-center" onClick={() => router.push("/member/help")}>
+                      <li
+                        className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:bg-indigo-700 hover:text-white focus:text-indigo-700 focus:outline-none flex items-center"
+                        onClick={() => router.push("/member/help")}
+                      >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="icon icon-tabler icon-tabler-help"
@@ -623,7 +649,10 @@ const NavBar = ({
                         </svg>
                         <span className="ml-2">Help Center</span>
                       </li>
-                      <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:bg-indigo-700 hover:text-white flex items-center focus:text-indigo-700 focus:outline-none" onClick={() => router.push("/member/setting")}>
+                      <li
+                        className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:bg-indigo-700 hover:text-white flex items-center focus:text-indigo-700 focus:outline-none"
+                        onClick={() => router.push("/member/setting")}
+                      >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="icon icon-tabler icon-tabler-settings"
@@ -718,5 +747,4 @@ const NavBar = ({
     </>
   );
 };
-
 export default NavBar;
